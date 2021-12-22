@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/left_arrow.png" type="Texture" id=1]
+[ext_resource path="res://assets/up_arrow.png" type="Texture" id=2]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/right_arrow.png-7475fed4c44f10b38ad1a493af721973.stex"
+
+[node name="ui control" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 320.0
+margin_bottom = 181.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="right" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 72, 136 )
+rotation = 0.00206729
+scale = Vector2( 2.76923, 2.17647 )
+normal = SubResource( 1 )
+passby_press = true
+action = "ui_right"
+visibility_mode = 1
+
+[node name="up" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 256, 136 )
+scale = Vector2( 2.76923, 2.79185 )
+normal = ExtResource( 2 )
+action = "ui_up"
+visibility_mode = 1
+
+[node name="left" type="TouchScreenButton" parent="Control"]
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 32, 136 )
+scale = Vector2( 2.76923, 2.17647 )
+normal = ExtResource( 1 )
+passby_press = true
+action = "ui_left"
+visibility_mode = 1
